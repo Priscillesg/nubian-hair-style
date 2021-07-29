@@ -4,7 +4,7 @@ import './TopNav.css';
 const TopNav = () => {
 
     return (
-        <div>
+        <div className='container-topnav'>
             <div className='container-reviews'>
                 <span>Write a Review</span>
                 <span>Events</span>

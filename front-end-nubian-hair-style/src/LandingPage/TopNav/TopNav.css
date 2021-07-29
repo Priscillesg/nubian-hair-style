@@ -1,11 +1,22 @@
 .container-login {
     display: flex;
-    justify-content: flex-end;
-    /* align-items:center; */
-}
+    align-items:center;
+    margin-right: 1.5rem;
+ } 
 
 .container-reviews {
     display: flex;
-    justify-content: flex-start;
+    align-items: center;
+    margin-left: 1.5rem;
 }
 
+.container-topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem;
+}
+
+span {
+    margin: 1.5rem;
+}
