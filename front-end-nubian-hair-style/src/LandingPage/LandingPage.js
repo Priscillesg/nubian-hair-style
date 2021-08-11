@@ -21,7 +21,7 @@ const LandingPage= () => {
 
 
         <div className='landing'>
-            <div className='search-area'>
+            <div className="homepage-hero">
                 <TopNav/>
                 <SearchBar search= {search}/>
                 <SearchSuggestions/>

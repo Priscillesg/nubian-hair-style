@@ -4,18 +4,17 @@ import './TopNav.css';
 const TopNav = () => {
 
     return (
-        <div className='container-topnav'>
-            <div className='container-reviews'>
-                <span>Write a Review</span>
-                <span>Events</span>
-            </div>
-            
-            <div className='container-login'>
-                <span>Login</span>
-                <button className='button'>Sign up</button>
-            </div>
-
-
+        <div>
+            <nav className="nav">
+                <div className="topnav-container">
+                    <h1 className="logo"><a href="/">Nubian Hair Style</a></h1>
+                    <div classNameName="main-menu">
+                        {/* <Link to="Login">SIGN IN/SIGN UP</Link>
+                        <Link to="favouritesList">FAVOURITES</Link> */}
+                        <button type="button" classNameName="btn-topnav">Log Out</button>
+                    </div>
+                </div>
+            </nav>
         </div>
     );
 }

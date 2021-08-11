@@ -20,27 +20,31 @@ const SearchBar = (props) => {
 
 
     return (
-        <form onSubmit={submit}>
+        
             <div>
-                <div className='container'>
-                    <p>
+                <div className='w-full h-64 bg-blue bg-cover'>
+                <form onSubmit={submit}>
+                <div className="container-form">
+                    {/* <p className="form input-icons">
                         <button>Search</button>
-                    </p>
-                    <p>
+                    </p> */}
+                    <p className="form input-icons">
                         <input type="text" className = "input" id="salons" placeholder = "Salons" value={term} onChange ={(e)=>setTerm(e.target.value)}/>
                     </p>
-                    <p>
+                    {/* <pclassName="form input-icons">
                     <button>Near</button>
-                    </p>
-                    <p>
+                    </p> */}
+                    <p className="form input-icons">
                         <input type="text" className = "input" id="Where" placeholder = "Where" value={location} onChange ={(e)=>setLocation(e.target.value)}/>
                     </p>
                     <p>
-                        <button onClick={submit}>Search Icon</button>
+                        <button onClick={submit} className="btn btn-primary">Search Icon</button>
                     </p>
                 </div>
+                </form>
+                </div>
             </div>
-        </form>
+       
 
     );
 
