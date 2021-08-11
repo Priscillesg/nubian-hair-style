@@ -7,7 +7,7 @@ import Rating from 'react-rating';
 // const fullSymbol = <FontAwesomeIcon icon="fas fa-star"/>
 
 
-const BusinessRating = () => {
+const BusinessRating = (props) => {
     return (
         <div className='rating'>
             <Rating
@@ -17,9 +17,9 @@ const BusinessRating = () => {
 
             fractions={2}
             readonly
-            initialRating={3}
+            initialRating={props.rating}
             />
-            <p>724 reviews</p>
+            <p>{props.reviewCount}</p>
 
             
 
