@@ -21,7 +21,7 @@ export default function CarouselContainer(props) {
         <div className="container-fluid business-app">
             <div className="row">
                 {props.photos.map((photo, index) =>(
-                    <div className="image-container d-flex justify-content-start m-3">
+                    <div className="image-container d-flex justify-content-start m-3 photo-image">
                         <img src={photo} alt="pictures" className="image-businessDetails"/>
                         <div className="overlay d-flex align-items-center justify-content"></div>
                     </div>

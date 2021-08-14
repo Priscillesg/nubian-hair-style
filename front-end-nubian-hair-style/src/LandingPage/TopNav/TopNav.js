@@ -6,13 +6,12 @@ const TopNav = () => {
 
     return (
         <div>
-            <nav className="nav">
-                <div className="topnav-container">
-                    <h1 className="logo"><a href="/">Nubian Hair Style</a></h1>
+            <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/">Nubian Hair Style</a>
                     <div className="main-menu">
-                        <Link to="Login">SIGN IN/SIGN UP</Link>
-                        <Link to="Favourites">FAVOURITES</Link>
-                        {/* <button type="button" classNameName="btn-topnav">Log Out</button> */}
+                        <div><Link to="Login">SIGN IN/SIGN UP</Link></div>
+                        <div><Link to="Login">FAVOURITES</Link></div>
                     </div>
                 </div>
             </nav>

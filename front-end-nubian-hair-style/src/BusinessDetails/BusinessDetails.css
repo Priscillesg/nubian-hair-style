@@ -3,6 +3,8 @@
     width: 1099px;
     margin-left: 250px;
     margin-right: 25px;
+   
+
 }
 
 .business-hours {
@@ -17,4 +19,16 @@
     flex-wrap: nowrap;
     /* max-width: 600px;   
     max-height: 400px; */
+}
+
+.container-businessdetails {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    box-sizing: border-box;
+    padding: 40px;
+    height: 800px;
 }

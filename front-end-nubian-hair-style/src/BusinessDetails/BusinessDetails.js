@@ -61,16 +61,46 @@ const BusinessDetails = () => {
         })
     }
 
-        useEffect(() => {
-            APIService.SaveFavoris(favourites)
-            .then(resp =>  console.log(resp))
-            .catch(error =>console.log(error))
-    
-        }, [favourites]) 
+    useEffect(() => {
+        APIService.SaveFavoris(favourites)
+        .then(resp =>  console.log(resp))
+        .catch(error =>console.log(error))
+
+    }, [favourites]) 
+
+   const [reviews, setReviews] = useState([])
+    useEffect (()=>{
+        const abortController = new window.AbortController();
+        const signal = abortController.signal
+
+        fetch(`http://127.0.0.1:8000/api_list/${business_id}/reviews`, {
+            'method':'GET',
+            headers: {
+              'Content-Type':'application/json',
+              'Authorization':`Token 164db5e00610c5a682f19e61ec0960f656de73b2` 
+            }
+        }, { signal: signal })
+        .then(resp => resp.json())
+        .then(resp => {setReviews(resp.reviews);
+            console.log(resp)
+        })
+        .catch(error => console.log(error));
+        return function cleanup() {
+            abortController.abort();
+          };
+ 
+        
+    },[business_id])
+
+    console.log("this are customers reviews",reviews)
+
+    // const review = reviews[0].text
 
     return (
         <div>
-            <TopNav/>
+             <TopNav/>
+            <div className="container-businessdetails">
+               
                 <CarouselContainer photos = {pictures}
                                     // second = {first} 
                                     // third = {first} 
@@ -78,10 +108,9 @@ const BusinessDetails = () => {
                                     onFavorites={onFavorites}
                                     name={businessDetail.name}
                                     rating={businessDetail.rating}
-                                    review_count={businessDetail.review_count}>
-                                    
-                </CarouselContainer>
-                <CustomerReview/>
+                                    review_count={businessDetail.review_count}/>
+                <CustomerReview reviews={reviews}/>
+            </div>
         </div>
     )
 }
