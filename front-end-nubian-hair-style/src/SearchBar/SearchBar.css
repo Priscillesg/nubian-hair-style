@@ -6,31 +6,34 @@
     height: 400px;
 }
 
-.bg-cover {
+/* .bg-cover {
     background-image:  linear-gradient( rgba(42, 42, 42, 0.5), rgba(42, 42, 42, 0.5) ), url(../images/park-street-KYUiTYOaE9M-unsplash.jpg);
     background-size: cover;
     background-position: 50%;
     padding-top: 30px;
-    height: 570px;;
-
-}
-
-
-.searchbar-img {
+    height: 570px;
     position: relative;
-}
+
+} */
+
+
+
 
 .container-form{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 15px;
+    /* position: absolute;
+    top: 60%;
+    left: 25%; */
 }
 
 input {
     height: 50px;
     width: 350px;
     border-radius: 5px;
-    border: 0px solid white;
+    border: 5px solid black;
 }
 
 .btn-primary{

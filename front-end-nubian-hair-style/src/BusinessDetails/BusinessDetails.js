@@ -1,7 +1,15 @@
+import { yieldExpression } from 'babel-types';
+// import { Carousel } from 'bootstrap';
 import React, {useState, useEffect} from 'react'
 import { useParams } from "react-router-dom";
 import APIService from '../hooks/yelp-api/APIService';
+import TopNav from '../LandingPage/TopNav/TopNav';
+import CarouselContainer from '../CarouselContainer/CarouselContainer';
+// import {GrFavorite} from "react-icons/gr"
 // import {useCookies} from 'react-cookie';
+import Rating from 'front10-rating';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import CustomerReview from '../CustomerReview/CustomerReview';
 
 
 
@@ -13,6 +21,7 @@ const BusinessDetails = () => {
 
     const [favourites, setFavourites] = useState({})
     const { business_id } = useParams();
+    const [pictures, setPictures] = useState([])
     // const [token] = useCookies(['mytoken'])
 
 
@@ -31,7 +40,10 @@ const BusinessDetails = () => {
             }
         })
         .then(resp => resp.json())
-        .then(resp => {setBusinessDetail(resp);
+        .then(resp => {
+            setBusinessDetail(resp)
+            setPictures(resp.photos)
+            ;
         })
         .catch(error => console.log(error));
         // return function cleanup() {
@@ -55,32 +67,21 @@ const BusinessDetails = () => {
             .catch(error =>console.log(error))
     
         }, [favourites]) 
-    
 
     return (
         <div>
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                    <img src={businessDetail.image_url} alt='businessDetail-img'  className='businessDetail-image'/>
-                    </div>
-                    <div class="col">
-                        <h3>{businessDetail.name}</h3>
-                        {/* <p>{businessDetail.location.display_address}</p> */}
-                        {/* <BusinessRating reviewCount={businessDetail.review_count}/> */}
-                        <p>{businessDetail.rating} ({businessDetail.review_count} reviews)</p>
-                        {/* <span>{businessDetail.categories.map(category => {return <li>{category["title"]}</li>})}</span> */}
-                    </div>
-                    {/* <div class="col">
-                        <button onClick={onFavorites}>Favoris</button>
-                        </div> */}
-                    <button onClick = {()=>onFavorites()}>Click</button>
-                    
-                    
-                </div>
-            </div>
-      
-
+            <TopNav/>
+                <CarouselContainer photos = {pictures}
+                                    // second = {first} 
+                                    // third = {first} 
+                                    // fourth = {first} 
+                                    onFavorites={onFavorites}
+                                    name={businessDetail.name}
+                                    rating={businessDetail.rating}
+                                    review_count={businessDetail.review_count}>
+                                    
+                </CarouselContainer>
+                <CustomerReview/>
         </div>
     )
 }

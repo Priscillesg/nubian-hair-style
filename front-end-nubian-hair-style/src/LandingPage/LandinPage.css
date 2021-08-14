@@ -8,3 +8,30 @@
     display: flex;
     justify-content: center;
 } */
+
+
+.bg-cover {
+    background-image:  linear-gradient( rgba(42, 42, 42, 0.5), rgba(42, 42, 42, 0.5) ), url(../images/canva-hero-pic.png);
+    background-size: cover;
+
+    background-position: 50%;
+    /* padding-top: 30px; */
+    height: 370px;
+    position: relative;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.heading {
+    color:white;
+    /* margin-top: 50px;; */
+    position: absolute;
+    top: 35%;
+    left:5%;
+}
+
+.line-break {
+    position: absolute;
+    top: 95%;
+    left:35%;
+}

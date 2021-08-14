@@ -1,8 +1,6 @@
 import React from 'react';
 import NavBar from '../NavBar/NavBar';
-import SubNav from '../NavBar/SubNav/SubNav';
 import SearchResults from './SearchResults/SearchResults';
-import SearchResultsSummary from './SearchResultsSummary/SearchResultsSummary';
 import { useHistory, useLocation } from "react-router-dom";
 import {useBusinessSearch} from '../hooks/yelp-api/useBusinessSearch';
 
@@ -33,12 +31,6 @@ const Search = () => {
             term={searchParams.term}
             location={searchParams.location}
             search={search}/>
-            <SubNav/>
-            <SearchResultsSummary 
-            term={term}
-            location={locationParam}
-            amountResults={amountResults}
-            shownResults={businesses ? businesses.length : 0}/>
             <SearchResults businesses={businesses}/>
         </div>
     );

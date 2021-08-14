@@ -2,16 +2,16 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import APIService from '../hooks/yelp-api/APIService';
 import {useCookies} from 'react-cookie';
+import OneFavorite from './OneFavorite';
+import TopNav from '../LandingPage/TopNav/TopNav';
+import './Favourites.css';
+import {RiDeleteBin6Line} from "react-icons/ri"
 
 const FavouritesList = () => {
     const [favouritesList, setFavouritesList] = useState([])
-    // const [deletedFavourite, setDeletedFavourites] = useState({})
     const [selectedId, setSelectedId] = useState('')
     const [token] = useCookies(['mytoken'])
 
-    
- 
-        
     useEffect(() => {
         fetch('http://127.0.0.1:8000/api/favoris/', {
             'method':'GET',
@@ -26,14 +26,11 @@ const FavouritesList = () => {
 
     }, [token]) 
     
-
-
     const onDeleteFavourites= (id) => {
         
         const newFavouriteList = favouritesList.filter(
             
-			(favourite) => favourite.id !== id
-            
+			(favourite) => favourite.id !== id        
 		);
 
         setFavouritesList(newFavouriteList);
@@ -41,7 +38,6 @@ const FavouritesList = () => {
         
     }
 
- 
     useEffect(() => {
         APIService.DeleteFavourite(selectedId)
         .then(resp =>  console.log(resp))
@@ -51,9 +47,10 @@ const FavouritesList = () => {
 
     const listOfFavourites = favouritesList.map((favourite) =>{
         return (
-            <div key={favourite.id}>
-                <div onClick = {()=>onDeleteFavourites(favourite.id)}>{favourite.name}</div>
-                <div></div>
+            <div key={favourite.id} className="div-delete">
+                <div onClick = {()=>onDeleteFavourites(favourite.id)}><RiDeleteBin6Line className="delete-icon"/></div>
+                <OneFavorite id ={favourite.business_id} name={favourite.name} image={favourite.image_url}/>
+                
             </div>
 
         )}
@@ -64,9 +61,8 @@ const FavouritesList = () => {
 
     return (
         <div>
-            <div>
-            {listOfFavourites}
-            </div>
+            <TopNav/>
+            <div className="separator">{listOfFavourites}</div>
             
         </div>
     )

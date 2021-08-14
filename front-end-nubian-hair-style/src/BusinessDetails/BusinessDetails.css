@@ -1,0 +1,20 @@
+.businessDetail-image{
+    height: 500px;
+    width: 1099px;
+    margin-left: 250px;
+    margin-right: 25px;
+}
+
+.business-hours {
+    margin-left: 350px;
+    margin-right: 270px;
+}
+
+/* s */
+
+.business-app > .row {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    /* max-width: 600px;   
+    max-height: 400px; */
+}

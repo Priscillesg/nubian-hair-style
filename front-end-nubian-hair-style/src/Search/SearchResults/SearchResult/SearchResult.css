@@ -1,5 +1,11 @@
 .search-result {
     display: flex;
+    margin-bottom: 40px;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 850px;
+    min-width: 850px;
 }
 
 .business-image {
@@ -10,9 +16,52 @@
   }
 
 .business-info {
-    min-width: 400px;
+    position: relative;
   }
   
 .contact-info p {
     font-size: 0.85rem;
   }
+
+/* .stretched-link {
+  position: absolute;
+  top: 65%;
+  left: 75%;
+
+} */
+
+.mt-0 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 30px;
+  /* font-weight: bolder;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  line-height: 1.6; */
+
+}
+
+.btn-results {
+  background-color: transparent;
+  padding: 10px 30px;
+  box-shadow: 10px 5px 5px grey;
+  
+}
+
+.business-tag {
+  margin-right: 15px;
+  background-color: rgb(237, 235, 235);
+  padding: 3px;
+  border-radius: 5px;
+  color: rgb(109, 109, 109);
+  font-weight: bolder;
+  
+}
+
+.span-search {
+  display: inline;
+}
+
+.hidden {
+  display: none;
+}
