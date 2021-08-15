@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom";
 import Section from '../Section/Section';
 import Image1 from "../images/park-street-KYUiTYOaE9M-unsplash.jpg";
 import './LandinPage.css';
+import BottomNav from './BottomNav/BottomNav';
 
 
 
@@ -22,19 +23,18 @@ const LandingPage= () => {
       }
 
     return (
-
-
+        
+            
         <div className='landing'>
-            <div className="homepage-hero">
-                <TopNav/>
-                <div className="bg-cover">
-                    <h1 className="heading">Discover Black Hair Salons<br/><span className="line-break">Near You</span></h1>
-                </div>
-                
-                <SearchBar search= {search}/>
-                <Section/>
-            </div>
+            <TopNav/>
+            <p className="p-land">Discover black hair salon near you</p>
+            <video src="/videos/pexels-kampus-production-6940184.mp4" autoPlay loop muted id="video"></video>
+            <SearchBar search= {search}/>
+            <BottomNav/>
+          
         </div>
+        
+        
 
     );
 }

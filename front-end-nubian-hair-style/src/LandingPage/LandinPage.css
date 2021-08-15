@@ -1,37 +1,30 @@
-/* .search-area{
+.landing {
+    position: relative;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    /* padding: 100px; */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    object-fit: contain;
+    box-shadow: inset 0 0 0 1000px rgba( 0, 0, 0, 0.5);;
+    /* align-items: center;  */
+    justify-content: space-between;
 }
 
-.landing {
-    display: flex;
-    justify-content: center;
-} */
 
-
-.bg-cover {
-    background-image:  linear-gradient( rgba(42, 42, 42, 0.5), rgba(42, 42, 42, 0.5) ), url(../images/canva-hero-pic.png);
-    background-size: cover;
-
-    background-position: 50%;
-    /* padding-top: 30px; */
-    height: 370px;
-    position: relative;
-    margin-left: 10%;
-    margin-right: 10%;
+.landing video {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    object-fit: cover;
+    z-index: -1;
 }
 
-.heading {
-    color:white;
-    /* margin-top: 50px;; */
+.p-land {
+    color: white;
+    font-size: 20px;
     position: absolute;
-    top: 35%;
-    left:5%;
-}
-
-.line-break {
-    position: absolute;
-    top: 95%;
-    left:35%;
+    top: 53%;
+    left: 40%;
 }
