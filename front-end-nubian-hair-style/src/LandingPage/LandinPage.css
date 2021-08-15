@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     object-fit: contain;
-    box-shadow: inset 0 0 0 1000px rgba( 0, 0, 0, 0.5);;
+    box-shadow: inset 0 0 0 1000px rgba( 0, 0, 0, 0.7);;
     /* align-items: center;  */
     justify-content: space-between;
 }
@@ -28,3 +28,29 @@
     top: 53%;
     left: 40%;
 }
+
+.type {
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.cities-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    position: absolute;
+    top: 75%;
+    
+    
+}
+
+li {
+    list-style-type: none;
+}
+

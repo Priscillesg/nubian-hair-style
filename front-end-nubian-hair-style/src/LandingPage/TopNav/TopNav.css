@@ -11,4 +11,9 @@ nav a {
 
 .main-menu > a {
     text-decoration: none;
+    
+}
+
+.signIn {
+    font-size: 15px;
 }

@@ -1,11 +1,15 @@
-.search-result {
+.test-results {
     display: flex;
     margin-bottom: 40px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 20px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     max-width: 850px;
     min-width: 850px;
+}
+
+.search-result-border {
+  border: 0px;
 }
 
 .business-image {
@@ -64,4 +68,8 @@
 
 .hidden {
   display: none;
+}
+
+.btn-secondary {
+  max-width: 200px;
 }
