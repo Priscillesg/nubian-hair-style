@@ -7,7 +7,6 @@ const SearchResults = (props) => {
     console.log(props.businesses)
     if(!props.businesses || !props.businesses.length) {
         return (<div></div>)
-        // searchResults = props.businesses.map(b => <SearchResult key={b.id} business={b}/>);
     }
     const searchResults = props.businesses.map(b => <SearchResult key={b.id} business={b}/>);
     

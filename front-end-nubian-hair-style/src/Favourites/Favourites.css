@@ -1,7 +1,13 @@
 .separator {
-    background-color: black;
+    background-image: linear-gradient( rgba(8, 8, 8, 0.5), rgba(8, 8, 8, 0.596) ), url(../images/adam-winger-M4R8iaqPVp8-unsplash.jpg);
     padding: 100px;
     padding-left: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+   align-items: center;
 }
 
 .div-delete {
@@ -12,7 +18,7 @@
 .delete-icon {
     position: absolute;
     left: 90%;
-    top:80%;
+    top:70%;
     z-index: 5;
     font-size: 30px;
 }

@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom";
 import './LandinPage.css';
 import BottomNav from './BottomNav/BottomNav';
 import Typewriter from 'typewriter-effect';
+import image1 from "../images/BW62.svg";
 
 
 
@@ -49,14 +50,6 @@ const LandingPage= () => {
            }}/>
            </div>
             <SearchBar search= {search}/>
-            <div className="cities-list">
-                <li>Braids</li>
-                <li>Weaves</li>
-                <li>Natural Hair</li>
-                <li>Hair Cuts</li>
-                <li>Dreadlocks</li>
-                <li>Color</li>
-            </div>
             <BottomNav/>
           
         </div>

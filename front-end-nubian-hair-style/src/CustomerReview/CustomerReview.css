@@ -17,8 +17,8 @@
 }
 
 .div-customer-image {
-    width: 100px;
-    height: 90px;
+    max-width: 90px;
+    max-height: 90px;
     /* border: 1px solid black; */
     margin-bottom: 10px;
   

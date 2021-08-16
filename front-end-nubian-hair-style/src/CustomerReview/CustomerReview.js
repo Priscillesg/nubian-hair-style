@@ -6,7 +6,7 @@ export default function CustomerReview(props) {
 
     return (
         <div className="container-fluid business-app">
-            <div className="row row-reviews">
+            <div className="row row-reviews justify-content-center">
             {props.reviews.map((review, index) => (
                 <div className="card review-card">
                     <div className="card-body card-body-review">

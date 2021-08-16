@@ -1,16 +1,16 @@
 import React from 'react'
-// import TopNav from '../LandingPage/TopNav/TopNav';
+import TopNav from '../LandingPage/TopNav/TopNav';
 import SearchBar from '../SearchBar/SearchBar';
 import './NavBar.css';
 
 const NavBar = (props) => {
     return (
         <div className='nav-bar'>
-            {/* <div className="test-navbartop">
+            <div className="test-navbartop">
             <TopNav/>
-            </div> */}
+            </div>
             <div className="test-navbar">
-            <SearchBar
+            <SearchBar className="comp"
             term = {props.term}
             location = {props.location}
             search = {props.search}

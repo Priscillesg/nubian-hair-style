@@ -2,7 +2,7 @@ import React from 'react';
 import './CarouselContainer.css';
 import './carouselContainer.scss';
 
-// import {MdFavorite} from "react-icons/md"
+import {MdFavorite} from "react-icons/md"
 // import Rating from 'front10-rating'
 
 
@@ -10,18 +10,19 @@ import './carouselContainer.scss';
 
 export default function CarouselContainer(props) {
 
-    // const onFavoritesUser =(event) => {
-    //     event.preventDefault();
-    //     props.onFavorites()
-    // }
+    const onFavoritesUser =(event) => {
+        event.preventDefault();
+        props.onFavorites()
+    }
 
 
     
     return (
         <div className="container-fluid business-app">
-            <div className="row">
+             <div className="me-5"><MdFavorite onClick = {onFavoritesUser} className="favorites-icon float-end"/></div>
+            <div className="row justify-content-center">
                 {props.photos.map((photo, index) =>(
-                    <div className="image-container d-flex justify-content-start m-3 photo-image">
+                    <div className="image-container d-flex justify-content-center m-3 photo-image">
                         <img src={photo} alt="pictures" className="image-businessDetails"/>
                         <div className="overlay d-flex align-items-center justify-content"></div>
                     </div>

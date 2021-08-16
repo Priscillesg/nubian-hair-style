@@ -1,9 +1,7 @@
 .test-results {
     display: flex;
     margin-bottom: 40px;
-    /* border: 1px solid black; */
     padding: 20px;
-    /* border-radius: 5px; */
     max-width: 850px;
     min-width: 850px;
 }
@@ -27,21 +25,11 @@
     font-size: 0.85rem;
   }
 
-/* .stretched-link {
-  position: absolute;
-  top: 65%;
-  left: 75%;
-
-} */
 
 .mt-0 {
   margin-top: 0px;
   margin-bottom: 0px;
   font-size: 30px;
-  /* font-weight: bolder;
-  letter-spacing: 1px;
-  word-spacing: 4px;
-  line-height: 1.6; */
 
 }
 

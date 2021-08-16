@@ -48,7 +48,7 @@ const FavouritesList = () => {
     const listOfFavourites = favouritesList.map((favourite) =>{
         return (
             <div key={favourite.id} className="div-delete">
-                <div onClick = {()=>onDeleteFavourites(favourite.id)}><RiDeleteBin6Line className="delete-icon"/></div>
+                <div onClick = {()=>onDeleteFavourites(favourite.id)}><RiDeleteBin6Line className="delete-icon mb-3"/></div>
                 <OneFavorite id ={favourite.business_id} name={favourite.name} image={favourite.image_url}/>
                 
             </div>
@@ -62,7 +62,11 @@ const FavouritesList = () => {
     return (
         <div>
             <TopNav/>
-            <div className="separator">{listOfFavourites}</div>
+            
+            <div className="w-800px p-0 separator">
+            <h1 className="text-center fs-3 fw-bold m-5 text-white">YOUR FAVOURITES</h1>
+                {listOfFavourites}
+                </div>
             
         </div>
     )

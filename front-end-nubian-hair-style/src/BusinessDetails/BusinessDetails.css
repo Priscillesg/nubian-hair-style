@@ -12,18 +12,15 @@
     margin-right: 270px;
 }
 
-/* s */
 
 .business-app > .row {
     overflow-x: auto;
     flex-wrap: nowrap;
-    /* max-width: 600px;   
-    max-height: 400px; */
 }
 
 .container-businessdetails {
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-left: 20%;
@@ -31,4 +28,9 @@
     box-sizing: border-box;
     padding: 40px;
     height: 800px;
+    background-color: whitesmoke;
+}
+
+h3 {
+    color: hotpink;
 }

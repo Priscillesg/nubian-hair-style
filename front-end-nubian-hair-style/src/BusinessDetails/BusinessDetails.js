@@ -1,16 +1,10 @@
-import { yieldExpression } from 'babel-types';
-// import { Carousel } from 'bootstrap';
 import React, {useState, useEffect} from 'react'
 import { useParams } from "react-router-dom";
 import APIService from '../hooks/yelp-api/APIService';
 import TopNav from '../LandingPage/TopNav/TopNav';
 import CarouselContainer from '../CarouselContainer/CarouselContainer';
-// import {GrFavorite} from "react-icons/gr"
-// import {useCookies} from 'react-cookie';
-import Rating from 'front10-rating';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CustomerReview from '../CustomerReview/CustomerReview';
-
 
 
 
@@ -46,9 +40,7 @@ const BusinessDetails = () => {
             ;
         })
         .catch(error => console.log(error));
-        // return function cleanup() {
-        //     abortController.abort();
-        //   };
+
         
     },[business_id])
 
@@ -94,21 +86,18 @@ const BusinessDetails = () => {
 
     console.log("this are customers reviews",reviews)
 
-    // const review = reviews[0].text
 
     return (
         <div>
              <TopNav/>
             <div className="container-businessdetails">
-               
+                <h3 className="text-center fs-6 fw-bold mt-3">PHOTOS</h3>
                 <CarouselContainer photos = {pictures}
-                                    // second = {first} 
-                                    // third = {first} 
-                                    // fourth = {first} 
                                     onFavorites={onFavorites}
                                     name={businessDetail.name}
                                     rating={businessDetail.rating}
                                     review_count={businessDetail.review_count}/>
+                <h3 className="text-center fs-6 fw-bold mt-3 mb-3">CUSTOMER REVIEWS</h3>
                 <CustomerReview reviews={reviews}/>
             </div>
         </div>

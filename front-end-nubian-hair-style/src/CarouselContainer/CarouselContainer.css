@@ -6,16 +6,22 @@
 
 
 .row > .photo-image {
-    max-width: 400px;
-    max-height: 450px;
+    max-width: 300px;
+    max-height: 350px;
     min-width: 200px;
-    min-height: 450px;
-    margin: 5px;
+    min-height: 350px;
+    /* margin: 5px; */
+    background-color: rgba(235, 233, 233, 0.954);
+    border-radius: 5px;
+}
+
+.business-app {
+    width: 70%;
 }
 
 .image-businessDetails {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
     opacity: 5;
 }
 
@@ -50,24 +56,8 @@
 	bottom: 0;
 	font-size: 20px;
 	padding: 20px;
-	text-align: center;
 
 }
-/* .backgroundImage {
-    max-height: 50vh;
-    min-height: 350px;
-    margin-left: 15%;
-    margin-right: 15%;
-    background: no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    border-radius: 5px;
-    display: flex;
-    justify-items: center;
-    justify-content: space-between;
-} 
 
 .favorites-icon {
     color: white;
@@ -77,26 +67,6 @@
     border: 1px solid white;
     font-size: 10px;
     background-color: rgba(227, 104, 104, 0.914);
-    position: absolute;
     padding: 10px;
-    top: 19%;
-    left: 80%;
+ 
 }
-
-.name {
-    color:white;
-    position: absolute;
-    top: 30%;
-    left: 35%;
-    font-size: 50px;
-    font-weight: bolder;
-}
-
-.rating-favorites {
-    color: white;
-    margin-left: 10px;
-    display: inline;
-    position: absolute;
-    top: 40%;
-    left: 35%;
-} */

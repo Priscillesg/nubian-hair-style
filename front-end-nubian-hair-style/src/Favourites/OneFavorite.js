@@ -12,12 +12,12 @@ export default function OneFavorite(props) {
     return (
         <div>
                
-                <div class="d-flex position-relative" className="favourite-results">
+                <div className="d-flex position-relative" className="favourite-results">
                     <Link to={`/api_list/${props.id}`}>
-                        <img src={props.image} class="flex-shrink-0 me-3" alt="..." className="favourites-image"/>
+                        <img src={props.image} className="flex-shrink-0 me-3" alt="..." className="favourites-image"/>
                     </Link> 
                     <div>
-                        <h5 class="mt-0" className="name-favorite">{props.name}</h5> 
+                        <h5 className="mt-0" className="name-favorite">{props.name}</h5> 
                     </div>
                     {/* <div onChange={removeBusiness}><RiDeleteBin6Line className="delete-icon"/></div> */}
 
